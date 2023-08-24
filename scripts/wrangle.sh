@@ -3,7 +3,7 @@
 TIMERANGE=5 # in seconds, 5 is optimal for quick tests
 
 function do_work(){
-    CHARTDIR=./charts
+    CHARTDIR=./tmp/charts
     if [ ! -d "$CHARTDIR" ]; then
       mkdir -p $CHARTDIR
     fi
@@ -12,8 +12,8 @@ function do_work(){
       echo "{ \"data\": [] }" > $CHARTFILE
     fi
 
-  for timestamp in $(ls -ABtl1 ./hits | head -n $TIMERANGE); do
-    DIR="./hits/${timestamp}"
+  for timestamp in $(ls -ABtl1 ./tmp/hits | head -n $TIMERANGE); do
+    DIR="./tmp/hits/${timestamp}"
     round="seconds"
     timestamp_step=$timestep
     if [[ $TIMERANGE -gt 6400 ]]; then

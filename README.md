@@ -12,6 +12,6 @@ In order to fetch raw data, run `PASSWORD=<Elastic Search Pass> bash ./scripts/f
 
 In order to prepare (wrangle) data for plotting, run `bash ./scripts/wrangle.sh`
 
-Upload wrangled JSON to observablehq.
+Upload wrangled JSON from `./tmp/charts/` to observablehq.
 
 Run the plot inside observablehq.
