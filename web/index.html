@@ -1,0 +1,38 @@
+<div id="observablehq-viewof-finishedSelectedBots-b2c4eea7"></div>
+<div id="observablehq-viewof-timeframe-b2c4eea7"></div>
+<div id="observablehq-viewof-finishedPathSearch-b2c4eea7"></div>
+<div id="observablehq-finishedResponses-b2c4eea7"></div>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+/>
+<script type="module">
+  import {
+    Runtime,
+    Inspector,
+  } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/50e6251afbd66975@1315.js?v=3";
+  new Runtime().module(define, (name) => {
+    if (name === "viewof finishedSelectedBots")
+      return new Inspector(
+        document.querySelector(
+          "#observablehq-viewof-finishedSelectedBots-b2c4eea7"
+        )
+      );
+    if (name === "viewof timeframe")
+      return new Inspector(
+        document.querySelector("#observablehq-viewof-timeframe-b2c4eea7")
+      );
+    if (name === "viewof finishedPathSearch")
+      return new Inspector(
+        document.querySelector(
+          "#observablehq-viewof-finishedPathSearch-b2c4eea7"
+        )
+      );
+    if (name === "finishedResponses")
+      return new Inspector(
+        document.querySelector("#observablehq-finishedResponses-b2c4eea7")
+      );
+  });
+</script>
